@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vicarry.vicarryproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VicarryProject">
+        <activity android:name=".ui.personal.TransportInformationActivity"></activity>
+        <activity android:name=".ui.personal.AddVehicleActivity" />
+        <activity android:name=".ui.personal.VehicleInformationActivity" />
+        <activity android:name=".ui.personal.ChangePasswordActivity" />
+        <activity android:name=".ui.personal.UpdatePersonalInformationActivity" />
+        <activity android:name=".ui.personal.PersonalAccountActivity" />
+        <activity android:name=".ui.start.StartChooseActorActivity" />
+        <activity android:name=".ui.commodityowner.SearchForOrderActivity" />
+        <activity android:name=".ui.commodityowner.OrderInformationActivity" />
+        <activity android:name=".ui.commodityowner.CreateOrderActivity" />
+        <activity android:name=".ui.commodityowner.HomeCommodityOwnerActivity" />
+        <activity android:name=".ui.truckowner.WithdrawMoneyActivity" />
+        <activity android:name=".ui.truckowner.TransactionHistoryActivity" />
+        <activity android:name=".ui.truckowner.HomeTruckOwnerActivity" />
+        <activity android:name=".ui.truckowner.SetScheduleActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
