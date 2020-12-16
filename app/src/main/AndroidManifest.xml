@@ -20,18 +20,20 @@
         <activity android:name=".ui.start.StartChooseActorActivity" />
         <activity android:name=".ui.commodityowner.SearchForOrderActivity" />
         <activity android:name=".ui.commodityowner.OrderInformationActivity" />
-        <activity android:name=".ui.commodityowner.CreateOrderActivity" />
-        <activity android:name=".ui.commodityowner.HomeCommodityOwnerActivity" />
-        <activity android:name=".ui.truckowner.WithdrawMoneyActivity" />
-        <activity android:name=".ui.truckowner.TransactionHistoryActivity" />
-        <activity android:name=".ui.truckowner.HomeTruckOwnerActivity" />
-        <activity android:name=".ui.truckowner.SetScheduleActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.commodityowner.CreateOrderActivity" >
+        </activity>
+        <activity android:name=".ui.commodityowner.HomeCommodityOwnerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.truckowner.WithdrawMoneyActivity" />
+        <activity android:name=".ui.truckowner.TransactionHistoryActivity" />
+        <activity android:name=".ui.truckowner.HomeTruckOwnerActivity" />
+        <activity android:name=".ui.truckowner.SetScheduleActivity" />
+        <activity android:name=".MainActivity">
         </activity>
     </application>
 
