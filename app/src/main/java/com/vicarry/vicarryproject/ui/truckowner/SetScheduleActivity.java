@@ -64,7 +64,7 @@ public class SetScheduleActivity extends AppCompatActivity {
 
         showDialog(binding1);
 
-        binding1.btnSave.setOnClickListener(new View.OnClickListener() {
+        binding1.btnRetry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int day = binding1.simpleDatePicker.getDayOfMonth();

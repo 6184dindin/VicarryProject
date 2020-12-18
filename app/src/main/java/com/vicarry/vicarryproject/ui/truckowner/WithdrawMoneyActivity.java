@@ -125,7 +125,7 @@ public class WithdrawMoneyActivity extends AppCompatActivity {
 
         binding1.tvDialogPrice.setText(binding.edtPrice.getText().toString().trim() + " VND");
 
-        binding1.btnSave.setOnClickListener(new View.OnClickListener() {
+        binding1.btnRetry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
