@@ -25,7 +25,7 @@ public class OrderInformationActivity extends AppCompatActivity {
     }
 
     private void seeDetails() {
-        TransitionManager.beginDelayedTransition(binding.layoutInformation, new AutoTransition().setDuration(500));
+        TransitionManager.beginDelayedTransition(binding.layoutInformation, new AutoTransition().setDuration(300));
         binding.layoutInfo1.setVisibility(View.VISIBLE);
         binding.layoutInfo2.setVisibility(View.GONE);
         binding.btnSeeDetails.setOnClickListener(v -> showMap());
@@ -33,7 +33,7 @@ public class OrderInformationActivity extends AppCompatActivity {
     }
 
     private void showMap() {
-        TransitionManager.beginDelayedTransition(binding.layoutInformation, new AutoTransition().setDuration(500));
+        TransitionManager.beginDelayedTransition(binding.layoutInformation, new AutoTransition().setDuration(300));
         binding.layoutInfo1.setVisibility(View.GONE);
         binding.layoutInfo2.setVisibility(View.VISIBLE);
         binding.btnShowMap.setOnClickListener(v -> seeDetails());

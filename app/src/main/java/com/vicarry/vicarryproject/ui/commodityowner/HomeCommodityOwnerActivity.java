@@ -38,6 +38,10 @@ public class HomeCommodityOwnerActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        binding.btnImgSearch.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeCommodityOwnerActivity.this, SearchForOrderActivity.class);
+            startActivity(intent);
+        });
     }
 
     void setListOrder() {
