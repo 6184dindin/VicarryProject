@@ -46,7 +46,6 @@
         <activity android:name=".ui.truckowner.TransactionHistoryActivity" />
         <activity android:name=".ui.truckowner.SetScheduleActivity" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
