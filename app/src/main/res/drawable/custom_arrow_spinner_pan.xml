@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="transparent">
+    <item
+        android:width="20dp"
+        android:gravity="right">
+        <bitmap
+            android:gravity="center|end"
+            android:src="@drawable/ic_down_arrow_pan" />
+    </item>
+</layer-list>

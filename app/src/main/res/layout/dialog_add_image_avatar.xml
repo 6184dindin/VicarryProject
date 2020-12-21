@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/bg_edit_text_update_personal_info_pan"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transition"
+                android:fontFamily="@font/tahoma"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Chọn hình ảnh"
+                android:textAllCaps="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_background" />
+
+            <Button
+                android:id="@+id/btnLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transition"
+                android:fontFamily="@font/tahoma"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Bộ sưu tập ảnh"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_background" />
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transition"
+                android:fontFamily="@font/tahoma"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Chụp ảnh"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_15sdp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/tahoma"
+            android:textStyle="bold"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Hủy"
+            android:textColor="@color/red"
+            android:background="@drawable/bg_edit_text_update_personal_info_pan"
+            android:backgroundTint="@color/white"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp" />
+    </LinearLayout>
+</RelativeLayout>

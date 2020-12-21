@@ -33,6 +33,14 @@ android {
 }
 
 dependencies {
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
+    //check permission
+    implementation 'com.karumi:dexter:6.2.1'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 

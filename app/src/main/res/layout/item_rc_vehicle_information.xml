@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:background="@drawable/bg_item_rc_vehicle_information_pan"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/_5sdp">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:src="@drawable/ic_delivery_truck_4_pan"
+        android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:id="@+id/tvVehicleCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xe thùng mui bạt"
+                android:fontFamily="@font/tahomabd"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/imgStatusCompletionInfo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_shield_pan"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvVehicleSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:text="18 Tấn | dài 9.25m x rộng 2.36m x cao 2.41m"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvLicensePlates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biển số:  11F1-3969"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_weight="0.3"
+        android:src="@drawable/ic_arrow_next_pan"/>
+
+</LinearLayout>

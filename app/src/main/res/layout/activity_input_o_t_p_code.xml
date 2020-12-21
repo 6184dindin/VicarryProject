@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_back_pan" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layoutOTPRegistry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/timesbd"
+                    android:text="Mã xác nhận"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/times"
+                    android:text="Nhập mã xác nhận gửi qua số"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/times"
+                    android:text="+84 09 398 05 37"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_30sdp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray_text"
+                        android:hint="0"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18sdp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnNextOTPRegistry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:background="@drawable/bg_edit_text_update_personal_info_pan"
+                    android:backgroundTint="@color/orange"
+                    android:fontFamily="@font/times"
+                    android:text="Tiếp theo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_22sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gửi lại mã OTP? "
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="@color/gray_text_OTP_pan"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(120 giây)"
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="@color/gray_text_OTP_pan"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutOTPResetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/times"
+                    android:text="Một mã OTP sẽ gửi đến số điện thoại"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/times"
+                    android:text="0903980564"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/tvOTPIncorrect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mã OTP nhập không chính xác !"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray_text"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_18sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roman"
+                            android:text="Thời gian hết hiệu lực : "
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roman"
+                            android:text="120 (s)"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnTryAgain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/transition"
+                        android:text="Chưa nhận được mã ? Thử lại"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNextResetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_text_update_personal_info_pan"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/times"
+                android:text="Tiếp theo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

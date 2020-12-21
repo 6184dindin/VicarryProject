@@ -8,15 +8,26 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white2">#80FFFFFF</color>
     <color name="transition">#00000000</color>
     <color name="orange">#F8810A</color>
     <color name="blue">#2D68B2</color>
     <color name="green">#4CAF50</color>
     <color name="red">#F80A0A</color>
     <color name="gray_text">#9A9496</color>
+    <color name="gray_text1_din">#BDBDBD</color>
     <color name="gray_button1">#AFAFAF</color>
     <color name="gray_button2">#CCCCCC</color>
     <color name="gray_border1">#E5E5E5</color>
     <color name="gray_border2">#707070</color>
+    <color name="gray_border3_din">#F4F4F4</color>
+    <color name="gray_border4_din">#E9E8E8</color>
+    <color name="gray_border5_din">#C6C5C5</color>
     <color name="gray_background">#EFEFEF</color>
+    <color name="gray_background1_din">#F8F9FA</color>
+    <color name="gray_background2_din">#F3F3F3</color>
+    <color name="gray_background3_din">#DFDFDE</color>
+    <color name="gray_background2">#FBFBFB</color>
+    <color name="blue_background">#0D6F84C1</color>
+    <color name="gray_text_OTP_pan">#CCCCCC</color>
 </resources>
