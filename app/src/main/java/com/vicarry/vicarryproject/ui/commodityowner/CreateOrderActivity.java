@@ -47,6 +47,7 @@ public class CreateOrderActivity extends AppCompatActivity {
         binding.btnComplete.setOnClickListener(v-> {
             closeKeyboard();
             Toast.makeText(this, "Compelte", Toast.LENGTH_SHORT).show();
+            finish();
         });
     }
     private void closeKeyboard() {

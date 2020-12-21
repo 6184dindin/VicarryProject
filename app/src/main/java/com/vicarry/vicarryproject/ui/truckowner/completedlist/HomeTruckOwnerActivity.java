@@ -186,7 +186,7 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView(List<CompletedApplicationObject> completedApplicationObjects) {
-        adapter = new CompletedApplicationAdapter(completedApplicationObjects);
+        adapter = new CompletedApplicationAdapter(completedApplicationObjects, getBaseContext());
         adapter.setiOnClickListenerCAA(new IOnClickListenerCAA() {
             @Override
             public void ImoveScreenCAA(int pss) {

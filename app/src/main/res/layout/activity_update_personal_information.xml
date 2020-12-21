@@ -71,7 +71,7 @@
                             android:id="@+id/imgAvatar"
                             android:layout_width="@dimen/_70sdp"
                             android:layout_height="@dimen/_70sdp"
-                            android:src="@drawable/qa"
+                            android:src="@drawable/ic_star_pan"
                             android:scaleType="centerCrop"
                             app:riv_corner_radius="@dimen/_50sdp" />
 

@@ -54,7 +54,7 @@
                     android:layout_width="@dimen/_60sdp"
                     android:layout_height="@dimen/_60sdp"
                     app:riv_corner_radius="@dimen/_60sdp"
-                    android:src="@drawable/qa"
+                    android:src="@drawable/ic_star_pan"
                     android:scaleType="centerCrop"/>
 
                 <LinearLayout

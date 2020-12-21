@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.VicarryProject" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#BECDCDCD</item>
-        <item name="colorPrimaryVariant">#BFCDCDCD</item>
+        <item name="colorPrimary">#CDCDCD</item>
+        <item name="colorPrimaryVariant">#CDCDCD</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
