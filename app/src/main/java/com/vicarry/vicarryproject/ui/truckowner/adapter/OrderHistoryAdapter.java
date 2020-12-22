@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vicarry.vicarryproject.R;
-import com.vicarry.vicarryproject.databinding.ItemRcvOhaSuBinding;
+import com.vicarry.vicarryproject.databinding.ItemOrderHistoryBinding;
 import com.vicarry.vicarryproject.ui.truckowner.model.OrderHistoryObject;
 
 import java.util.List;
@@ -26,8 +26,8 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemRcvOhaSuBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext())
-                , R.layout.item_rcv_oha_su, parent, false);
+        ItemOrderHistoryBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext())
+                , R.layout.item_order_history, parent, false);
         return new ViewHolder(binding);
     }
 
@@ -55,9 +55,9 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ItemRcvOhaSuBinding binding;
+        ItemOrderHistoryBinding binding;
 
-        public ViewHolder(@NonNull ItemRcvOhaSuBinding itemView) {
+        public ViewHolder(@NonNull ItemOrderHistoryBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
         }

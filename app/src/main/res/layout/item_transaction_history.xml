@@ -6,10 +6,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_2sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        android:layout_marginRight="@dimen/_2sdp"
-        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
         android:background="@drawable/bg_item_rcv_su"
         android:padding="@dimen/_5sdp">
 

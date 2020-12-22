@@ -3,7 +3,6 @@ package com.vicarry.vicarryproject.ui.truckowner.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -11,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vicarry.vicarryproject.R;
-import com.vicarry.vicarryproject.databinding.ItemRcvThaSuBinding;
+import com.vicarry.vicarryproject.databinding.ItemTransactionHistoryBinding;
 import com.vicarry.vicarryproject.ui.truckowner.WithdrawMoneyActivity;
 import com.vicarry.vicarryproject.ui.truckowner.model.TransactionHistoryObject;
 
@@ -29,9 +28,8 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        ItemRcvThaSuBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.item_rcv_tha_su, parent, false);
+        ItemTransactionHistoryBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
+                R.layout.item_transaction_history, parent, false);
         return new ViewHolder(binding);
     }
 
@@ -66,9 +64,9 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ItemRcvThaSuBinding binding;
+        ItemTransactionHistoryBinding binding;
 
-        public ViewHolder(@NonNull ItemRcvThaSuBinding binding1) {
+        public ViewHolder(@NonNull ItemTransactionHistoryBinding binding1) {
             super(binding1.getRoot());
             binding = binding1;
         }

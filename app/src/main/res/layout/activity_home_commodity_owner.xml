@@ -48,7 +48,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutAdd"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_below="@id/layoutHeading"
             android:orientation="horizontal">
 
@@ -56,8 +56,8 @@
                 android:id="@+id/btnImgAdd"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:src="@drawable/ic_plus_din"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/ic_plus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +65,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
                 android:fontFamily="@font/tahomabd"
                 android:text="Tạo đơn hàng"
                 android:textColor="@color/black"

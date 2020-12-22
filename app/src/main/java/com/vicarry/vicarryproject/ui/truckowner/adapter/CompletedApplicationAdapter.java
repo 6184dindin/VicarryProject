@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vicarry.vicarryproject.R;
-import com.vicarry.vicarryproject.databinding.ItemRcvHtoaSuBinding;
+import com.vicarry.vicarryproject.databinding.ItemCompletedApplicationBinding;
 import com.vicarry.vicarryproject.ui.truckowner.model.CompletedApplicationObject;
 
 import java.util.List;
@@ -33,43 +33,40 @@ public class CompletedApplicationAdapter extends RecyclerView.Adapter<CompletedA
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemRcvHtoaSuBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_rcv_htoa_su, parent, false);
+        ItemCompletedApplicationBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_completed_application, parent, false);
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        if(position == completedApplicationObjects.size() - 1) {
+            holder.binding.viewMarginBottom.setVisibility(View.VISIBLE);
+        }
         if (completedApplicationObjects.get(position).getStatusCAO() == 1) {
-            holder.itemRcvHtoaSuBinding.tvTime.setVisibility(View.GONE);
-
-            holder.itemRcvHtoaSuBinding.tvStatus.setText("Đang đợi chuyến");
-            holder.itemRcvHtoaSuBinding.tvStatus.setTextColor(Color.parseColor("#F8810A"));
-            holder.itemRcvHtoaSuBinding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_unfinished_1_su));
+            holder.binding.tvStatus.setText("Đang đợi chuyến");
+            holder.binding.tvStatus.setTextColor(Color.parseColor("#F8810A"));
+            holder.binding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_unfinished_1_su));
         } else if (completedApplicationObjects.get(position).getStatusCAO() == 2 || completedApplicationObjects.get(position).getStatusCAO() == 3) {
-            holder.itemRcvHtoaSuBinding.tvTime.setVisibility(View.GONE);
-
-            holder.itemRcvHtoaSuBinding.tvStatus.setTextColor(Color.parseColor("#2D68B2"));
-            holder.itemRcvHtoaSuBinding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_unfinished_2_su));
+            holder.binding.tvStatus.setTextColor(Color.parseColor("#2D68B2"));
+            holder.binding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_unfinished_2_su));
             if (completedApplicationObjects.get(position).getStatusCAO() == 2) {
-                holder.itemRcvHtoaSuBinding.tvStatus.setText("Đợi nhận hàng");
+                holder.binding.tvStatus.setText("Đợi nhận hàng");
             } else {
-                holder.itemRcvHtoaSuBinding.tvStatus.setText("Đang chuyển hàng");
+                holder.binding.tvStatus.setText("Đang chuyển hàng");
             }
         } else {
-            holder.itemRcvHtoaSuBinding.tvTime.setText(completedApplicationObjects.get(position).getTimeCAO());
-
-            holder.itemRcvHtoaSuBinding.tvStatus.setText("Hoàn thành");
-            holder.itemRcvHtoaSuBinding.tvStatus.setTextColor(Color.parseColor("#65B768"));
-            holder.itemRcvHtoaSuBinding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_finish_su));
+            holder.binding.tvStatus.setText("Hoàn thành");
+            holder.binding.tvStatus.setTextColor(Color.parseColor("#65B768"));
+            holder.binding.tvStatus.setBackground(context.getResources().getDrawable(R.drawable.bg_finish_su));
         }
 
-        holder.itemRcvHtoaSuBinding.tvCity.setText(completedApplicationObjects.get(position).getCityCAO());
-        holder.itemRcvHtoaSuBinding.tvTimeFromTo.setText(completedApplicationObjects.get(position).getTimeFromCAO() + " - "
-                + completedApplicationObjects.get(position).getTimeToCAO());
-        holder.itemRcvHtoaSuBinding.tvVehicle.setText(completedApplicationObjects.get(position).getNameVehicleCAO());
-        holder.itemRcvHtoaSuBinding.tvLisencePlates.setText(completedApplicationObjects.get(position).getLicensePlatesCAO());
-        holder.itemRcvHtoaSuBinding.tvName.setText(completedApplicationObjects.get(position).getNameCAO());
-        holder.itemRcvHtoaSuBinding.tvPhoneNumeber.setText(completedApplicationObjects.get(position).getPhoneNumeberCAO());
+//        holder.binding.tvCity.setText(completedApplicationObjects.get(position).getCityCAO());
+//        holder.binding.tvTime.setText(completedApplicationObjects.get(position).getTimeFromCAO() + " - "
+//                + completedApplicationObjects.get(position).getTimeToCAO());
+//        holder.binding.tvVehicle.setText(completedApplicationObjects.get(position).getNameVehicleCAO());
+//        holder.binding.tvLisencePlates.setText(completedApplicationObjects.get(position).getLicensePlatesCAO());
+//        holder.binding.tvName.setText(completedApplicationObjects.get(position).getNameCAO());
+//        holder.binding.tvPhoneNumeber.setText(completedApplicationObjects.get(position).getPhoneNumeberCAO());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,11 +82,11 @@ public class CompletedApplicationAdapter extends RecyclerView.Adapter<CompletedA
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ItemRcvHtoaSuBinding itemRcvHtoaSuBinding;
+        ItemCompletedApplicationBinding binding;
 
-        public ViewHolder(@NonNull ItemRcvHtoaSuBinding itemRcvHtoaSuBinding1) {
-            super(itemRcvHtoaSuBinding1.getRoot());
-            itemRcvHtoaSuBinding = itemRcvHtoaSuBinding1;
+        public ViewHolder(@NonNull ItemCompletedApplicationBinding binding1) {
+            super(binding1.getRoot());
+            binding = binding1;
         }
     }
 }

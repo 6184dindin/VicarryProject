@@ -80,7 +80,7 @@
                             android:layout_height="@dimen/_30sdp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/ic_plus_pan" />
+                            android:src="@drawable/ic_plus" />
 
                     </RelativeLayout>
 

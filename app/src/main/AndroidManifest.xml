@@ -41,12 +41,15 @@
         </activity>
         <activity android:name=".ui.truckowner.completedlist.InformationLineActivity" />
         <activity android:name=".ui.truckowner.orderhistory.InformationOrderActivity" />
-        <activity android:name=".ui.truckowner.orderhistory.OrderHistoryActivity" />
-        <activity android:name=".ui.truckowner.WithdrawMoneyActivity" />
-        <activity android:name=".ui.truckowner.TransactionHistoryActivity" />
-        <activity android:name=".ui.truckowner.SetScheduleActivity" />
+        <activity android:name=".ui.truckowner.orderhistory.OrderHistoryActivity" >
+        </activity>
+        <activity android:name=".ui.truckowner.WithdrawMoneyActivity" >
+        </activity>
+        <activity android:name=".ui.truckowner.TransactionHistoryActivity" >
+        </activity>
+        <activity android:name=".ui.truckowner.SetScheduleActivity" >
+        </activity>
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

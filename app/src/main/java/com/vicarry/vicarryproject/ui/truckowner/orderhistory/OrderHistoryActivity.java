@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.vicarry.vicarryproject.R;
 import com.vicarry.vicarryproject.databinding.ActivityOrderHistoryBinding;
+import com.vicarry.vicarryproject.ui.commodityowner.OrderInformationActivity;
 import com.vicarry.vicarryproject.ui.truckowner.adapter.IOnClickListenerObject;
 import com.vicarry.vicarryproject.ui.truckowner.adapter.OrderHistoryAdapter;
 import com.vicarry.vicarryproject.ui.truckowner.model.OrderHistoryObject;
@@ -36,7 +37,7 @@ public class OrderHistoryActivity extends AppCompatActivity implements IOnClickL
         addOHO();
         initRecyclerView();
 
-        binding.ivBack.setOnClickListener(new View.OnClickListener() {
+        binding.btnImgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -66,6 +67,6 @@ public class OrderHistoryActivity extends AppCompatActivity implements IOnClickL
 
     @Override
     public void ImoveScreen(Object object) {
-        startActivity(new Intent(OrderHistoryActivity.this, InformationOrderActivity.class));
+        startActivity(new Intent(OrderHistoryActivity.this, OrderInformationActivity.class));
     }
 }

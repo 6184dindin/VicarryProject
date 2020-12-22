@@ -3,6 +3,7 @@ package com.vicarry.vicarryproject.ui.truckowner.completedlist;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,18 +15,22 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
 
 import com.vicarry.vicarryproject.R;
 import com.vicarry.vicarryproject.databinding.ActivityHomeTruckOwnerBinding;
 import com.vicarry.vicarryproject.databinding.DialogRcvHtoaFinishSuBinding;
 import com.vicarry.vicarryproject.databinding.DialogRcvHtoaReceiveSuBinding;
 import com.vicarry.vicarryproject.databinding.DialogRcvHtoaWaitingSuBinding;
+import com.vicarry.vicarryproject.ui.commodityowner.OrderInformationActivity;
 import com.vicarry.vicarryproject.ui.personal.PersonalAccountActivity;
 import com.vicarry.vicarryproject.ui.truckowner.SetScheduleActivity;
 import com.vicarry.vicarryproject.ui.truckowner.adapter.CompletedApplicationAdapter;
@@ -63,7 +68,7 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
 
         dialog = new Dialog(this);
 
-        binding.ivBack.setOnClickListener(v -> {
+        binding.btnImgPersonalInfo.setOnClickListener(v -> {
             Intent intent = new Intent(HomeTruckOwnerActivity.this, PersonalAccountActivity.class);
             intent.putExtra("key",2);
             startActivity(intent);
@@ -100,11 +105,6 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
     }
 
     private void handingItemSelectedSpinner(int position) {
-        if (position == 0) {
-            binding.llSchedule.setVisibility(View.VISIBLE);
-        } else {
-            binding.llSchedule.setVisibility(View.GONE);
-        }
 
         List<CompletedApplicationObject> cAObject = new ArrayList<>();
         for (CompletedApplicationObject object : completedApplicationObjects) {
@@ -119,70 +119,28 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
             }
         }
 
-        initRecyclerView(cAObject);
+        initRecyclerView(completedApplicationObjects);
     }
 
     private void addRCV() {
         completedApplicationObjects.add(new CompletedApplicationObject("24/10/2020", "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", WAITING));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 1));
         completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", RECEIVED));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 2));
         completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", DELIVERED));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 3));
         completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", FINISHED));
-        completedApplicationObjects.add(new CompletedApplicationObject("24/10/2020", "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", WAITING));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 4));
         completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", RECEIVED));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 3));
         completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
                 "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", DELIVERED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", FINISHED));
-        completedApplicationObjects.add(new CompletedApplicationObject("24/10/2020", "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", WAITING));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", RECEIVED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", DELIVERED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", FINISHED));
-        completedApplicationObjects.add(new CompletedApplicationObject("24/10/2020", "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", WAITING));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", RECEIVED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", DELIVERED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", FINISHED));
-        completedApplicationObjects.add(new CompletedApplicationObject("24/10/2020", "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", WAITING));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", RECEIVED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", DELIVERED));
-        completedApplicationObjects.add(new CompletedApplicationObject(null, "Đà Nẵng",
-                "23/10/2020, 14:30", "24/10/2020, 14:30", "Xe tải mui bạt",
-                "30A 234.98", "Lê Minh Quý", "0909.654.213", FINISHED));
+                "30A 234.98", "Lê Minh Quý", "0909.654.213", 4));
     }
 
     private void initRecyclerView(List<CompletedApplicationObject> completedApplicationObjects) {
@@ -191,7 +149,7 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
             @Override
             public void ImoveScreenCAA(int pss) {
                 if (completedApplicationObjects.get(pss).getStatusCAO() == FINISHED) {
-                    startActivityForResult(new Intent(HomeTruckOwnerActivity.this, InformationLineActivity.class), INFORMATION_LINE_REQUEST);
+                    startActivityForResult(new Intent(HomeTruckOwnerActivity.this, OrderInformationActivity.class), INFORMATION_LINE_REQUEST);
                 } else if (completedApplicationObjects.get(pss).getStatusCAO() == DELIVERED) {
                     handingItemDialogDelivered();
                 } else if (completedApplicationObjects.get(pss).getStatusCAO() == RECEIVED) {
@@ -327,17 +285,21 @@ public class HomeTruckOwnerActivity extends AppCompatActivity {
 
     public void btnShowWallet(View view) {
         if (!checkBtnShowWallet) {
+            TransitionManager.beginDelayedTransition(binding.layoutPrice, new AutoTransition().setDuration(250));
             checkBtnShowWallet = true;
 
-            binding.tvPrice.setVisibility(View.VISIBLE);
-            binding.ivPrice.setImageDrawable(getResources().getDrawable(R.drawable.ic_wallet_1_su));
+//            binding.tvPrice.setLayoutParams(params);
 
-            binding.tvPrice.setAnimation(AnimationUtils.loadAnimation(HomeTruckOwnerActivity.this,
-                    R.anim.right_left_animation));
+//            binding.tvPrice.setAnimation(AnimationUtils.loadAnimation(HomeTruckOwnerActivity.this,
+//                    R.anim.right_left_animation));
+            binding.btnImgPrice.setImageDrawable(getResources().getDrawable(R.drawable.ic_wallet_1));
+            binding.tvPrice.setVisibility(View.VISIBLE);
+
 
             new CountDownTimer(2800, 1000) {
                 public void onFinish() {
-                    binding.ivPrice.setImageDrawable(getResources().getDrawable(R.drawable.ic_wallet_su));
+                    TransitionManager.beginDelayedTransition(binding.layoutPrice, new AutoTransition().setDuration(500));
+                    binding.btnImgPrice.setImageDrawable(getResources().getDrawable(R.drawable.ic_wallet_2));
                     binding.tvPrice.setVisibility(View.GONE);
                     checkBtnShowWallet = false;
                 }

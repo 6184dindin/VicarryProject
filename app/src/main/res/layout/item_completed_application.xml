@@ -2,28 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
         android:background="@drawable/bg_act_htoa_dialog_su"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingRight="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp">
-
-        <TextView
-            android:id="@+id/tvTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:text="24/10/2020"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14sdp"
-            android:textStyle="bold" />
+        android:padding="@dimen/_10sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,20 +23,18 @@
             <ImageView
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
-                android:src="@drawable/ic_logistic_su"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                android:src="@drawable/ic_logistic_su" />
 
             <TextView
                 android:id="@+id/tvCity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/tahomabd"
                 android:text="Đà Nẵng"
                 android:textColor="@color/blue"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_13sdp" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,19 +45,18 @@
             <ImageView
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
-                android:src="@drawable/ic_delivery_truck_time_su"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                android:src="@drawable/ic_delivery_truck_time_su" />
 
             <TextView
-                android:id="@+id/tvTimeFromTo"
+                android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/tahoma"
                 android:text="23/10/2020, 14:30 - 24/10/2020, 14:30"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_13sdp" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,30 +71,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvVehicle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:orientation="horizontal">
+                android:fontFamily="@font/tahoma"
+                android:layout_gravity="center_vertical"
+                android:text="Xe tải mui bạt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
 
-                <TextView
-                    android:id="@+id/tvVehicle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Xe tải mui bạt"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
-
-                <TextView
-                    android:id="@+id/tvLisencePlates"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:text="30A 234.98"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tvLisencePlates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/tahoma"
+                android:text="30A 234.98"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
 
         </LinearLayout>
 
@@ -123,10 +107,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:orientation="horizontal">
 
@@ -136,10 +120,8 @@
                     android:layout_height="wrap_content"
                     android:text="Xe tải mui bạt"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:fontFamily="@font/tahoma"
+                    android:textSize="@dimen/_13sdp" />
 
                 <TextView
                     android:id="@+id/tvPhoneNumeber"
@@ -147,26 +129,30 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginRight="@dimen/_20sdp"
-                    android:gravity="right"
                     android:text="30A 234.98"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/tahoma"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
         </LinearLayout>
 
         <TextView
             android:id="@+id/tvStatus"
-            android:layout_width="@dimen/_115sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginBottom="@dimen/_5sdp"
             android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"
             android:textAllCaps="false"
-            android:textColor="@color/gray_text"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold" />
     </LinearLayout>
+    <View
+        android:id="@+id/viewMarginBottom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"/>
+</LinearLayout>
 </layout>

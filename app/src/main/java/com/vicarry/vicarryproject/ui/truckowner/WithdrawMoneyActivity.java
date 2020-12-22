@@ -33,7 +33,7 @@ public class WithdrawMoneyActivity extends AppCompatActivity {
 
         dialog = new Dialog(this);
 
-        binding.ivBack.setOnClickListener(new View.OnClickListener() {
+        binding.btnImgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

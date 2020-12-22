@@ -3,258 +3,236 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+        <RelativeLayout
+            android:id="@+id/layoutHeading"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:paddingLeft="@dimen/_5sdp"
-            android:paddingTop="@dimen/_10sdp"
-            android:paddingRight="@dimen/_5sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="@dimen/_50sdp">
 
             <ImageView
-                android:id="@+id/ivBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_su"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/btnImgBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_back_din" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:fontFamily="@font/tahomabd"
                 android:text="Đặt lịch trình"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/ivBack"
-                app:layout_constraintStart_toEndOf="@+id/ivBack"
-                app:layout_constraintTop_toTopOf="@+id/ivBack" />
+                android:textSize="@dimen/_20sdp" />
 
             <View
-                android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_1sdp"
-                android:background="@color/gray_border1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_border5_din" />
+        </RelativeLayout>
 
         <ScrollView
-            android:id="@+id/scrollView4"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@id/constraintLayout"
-            android:fillViewport="true"
-            android:padding="@dimen/_10sdp"
-            app:layout_constraintBottom_toTopOf="@+id/btnSetSchedule"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/tahomabd"
                     android:text="Nơi tiếp nhận hàng"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_13sdp" />
 
                 <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:background="@drawable/style_spinner_su" />
+                    android:background="@drawable/bg_spinner_din" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
-                    android:background="@color/gray_border1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/gray_border1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/tahomabd"
                     android:text="Thời gian đợi hàng"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_13sdp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/bg_act_htoa_dialog_su"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_4sdp">
+                    android:background="@drawable/bg_border_gray_edit_text">
 
                     <TextView
                         android:id="@+id/tvDatePickerFrom"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/tahoma"
                         android:hint="Từ ngày"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
 
                     <ImageView
                         android:id="@+id/ivDatePickerFrom"
                         android:layout_width="@dimen/_25sdp"
                         android:layout_height="@dimen/_25sdp"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_calendar_su" />
+                        android:layout_margin="@dimen/_3sdp"
+                        android:src="@drawable/ic_calendar_din" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/bg_act_htoa_dialog_su"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_4sdp">
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/bg_border_gray_edit_text">
 
                     <TextView
                         android:id="@+id/tvDatePickerTo"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/tahoma"
                         android:hint="Đến ngày"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
 
                     <ImageView
                         android:id="@+id/ivDatePickerTo"
                         android:layout_width="@dimen/_25sdp"
                         android:layout_height="@dimen/_25sdp"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_calendar_su" />
+                        android:layout_margin="@dimen/_3sdp"
+                        android:src="@drawable/ic_calendar_din" />
                 </RelativeLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@color/gray_border1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/gray_border1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/tahomabd"
                     android:text="Thông tin xe"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_13sdp" />
 
                 <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:background="@drawable/style_spinner_su" />
+                    android:background="@drawable/bg_spinner_din" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
 
                     <EditText
-                        android:layout_width="@dimen/_140sdp"
+                        android:layout_width="0dp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@drawable/bg_act_htoa_dialog_su"
-                        android:gravity="center|left"
+                        android:layout_weight="4.5"
+                        android:background="@drawable/bg_border_gray_edit_text"
+                        android:fontFamily="@font/tahoma"
                         android:hint="Tải trọng"
-                        android:paddingLeft="@dimen/_5sdp"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_14sdp" />
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1" />
 
                     <EditText
-                        android:layout_width="@dimen/_130sdp"
+                        android:layout_width="0dp"
                         android:layout_height="@dimen/_30sdp"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/bg_act_htoa_dialog_su"
-                        android:gravity="center|left"
+                        android:layout_weight="4.5"
+                        android:background="@drawable/bg_border_gray_edit_text"
+                        android:fontFamily="@font/tahoma"
                         android:hint="Số xe"
-                        android:paddingLeft="@dimen/_5sdp"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_14sdp" />
-                </RelativeLayout>
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/bg_act_htoa_dialog_su"
-                    android:gravity="center|left"
+                    android:background="@drawable/bg_border_gray_edit_text"
+                    android:fontFamily="@font/tahoma"
                     android:hint="Thể tích chứa hàng (Dài x rông x cao)"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:textColor="@color/gray_text"
-                    android:textSize="@dimen/_14sdp" />
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@color/gray_border1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/gray_border1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/tahomabd"
                     android:text="Thông tài xế"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_13sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/bg_act_htoa_dialog_su"
-                    android:gravity="center|left"
+                    android:background="@drawable/bg_border_gray_edit_text"
+                    android:fontFamily="@font/tahoma"
                     android:hint="Tên tài xế"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:textColor="@color/gray_text"
-                    android:textSize="@dimen/_14sdp" />
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_40sdp"
-                    android:background="@drawable/bg_act_htoa_dialog_su"
-                    android:gravity="center|left"
+                    android:background="@drawable/bg_border_gray_edit_text"
+                    android:fontFamily="@font/tahoma"
                     android:hint="Số điện thoại"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:textColor="@color/gray_text"
-                    android:textSize="@dimen/_14sdp" />
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
             </LinearLayout>
         </ScrollView>
 
@@ -262,13 +240,12 @@
             android:id="@+id/btnSetSchedule"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
             android:background="@color/orange"
+            android:fontFamily="@font/tahoma"
             android:onClick="btnSetSchedule"
             android:text="Đặt đơn hàng"
             android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textSize="@dimen/_20sdp" />
+    </RelativeLayout>
 </layout>

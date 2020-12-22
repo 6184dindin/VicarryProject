@@ -17,7 +17,7 @@ import java.util.List;
 public class TransactionHistoryActivity extends AppCompatActivity {
     public static final int RECHARGE = 1;
     public static final int TRANSPORT = 2;
-    public static final int WHITDRAWAL = 3;
+    public static final int WITHDRAWAL = 3;
 
     ActivityTransactionHistoryBinding binding;
 
@@ -35,7 +35,7 @@ public class TransactionHistoryActivity extends AppCompatActivity {
         addObject();
         initRecyclerView();
 
-        binding.ivBack.setOnClickListener(v -> finish());
+        binding.btnImgBack.setOnClickListener(v -> finish());
     }
 
     private void addObject() {
@@ -46,7 +46,47 @@ public class TransactionHistoryActivity extends AppCompatActivity {
         objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
                 , "500.000", RECHARGE));
         objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
-                , "300.000", WHITDRAWAL));
+                , "300.000", WITHDRAWAL));
+        objects.add(new TransactionHistoryObject("22/11/2020 9:30", "BIDV", "937452123"
+                , "1.000.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("22/11/2020 7:30", "VICARRY SYSTEM", "VD98432"
+                , "200.000", TRANSPORT));
+        objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
+                , "500.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
+                , "300.000", WITHDRAWAL));
+        objects.add(new TransactionHistoryObject("22/11/2020 9:30", "BIDV", "937452123"
+                , "1.000.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("22/11/2020 7:30", "VICARRY SYSTEM", "VD98432"
+                , "200.000", TRANSPORT));
+        objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
+                , "500.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
+                , "300.000", WITHDRAWAL));
+        objects.add(new TransactionHistoryObject("22/11/2020 9:30", "BIDV", "937452123"
+                , "1.000.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("22/11/2020 7:30", "VICARRY SYSTEM", "VD98432"
+                , "200.000", TRANSPORT));
+        objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
+                , "500.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
+                , "300.000", WITHDRAWAL));
+        objects.add(new TransactionHistoryObject("22/11/2020 9:30", "BIDV", "937452123"
+                , "1.000.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("22/11/2020 7:30", "VICARRY SYSTEM", "VD98432"
+                , "200.000", TRANSPORT));
+        objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
+                , "500.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
+                , "300.000", WITHDRAWAL));
+        objects.add(new TransactionHistoryObject("22/11/2020 9:30", "BIDV", "937452123"
+                , "1.000.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("22/11/2020 7:30", "VICARRY SYSTEM", "VD98432"
+                , "200.000", TRANSPORT));
+        objects.add(new TransactionHistoryObject("21/11/2020 12:30", "BIDV", "VD97431"
+                , "500.000", RECHARGE));
+        objects.add(new TransactionHistoryObject("20/11/2020 11:30", "VICARRY SYSTEM", "937452123"
+                , "300.000", WITHDRAWAL));
     }
 
     private void initRecyclerView() {
